@@ -11094,7 +11094,7 @@ sub_0800B7F8: @ 0x0800B7F8
 	push {lr}
 	ldr r0, _0800B808 @ =0x04000100
 	ldrh r0, [r0]
-	bl sub_08072AC4
+	bl srand
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -11103,7 +11103,7 @@ _0800B808: .4byte 0x04000100
 	thumb_func_start sub_0800B80C
 sub_0800B80C: @ 0x0800B80C
 	push {lr}
-	bl sub_08072AC4
+	bl srand
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -11111,7 +11111,7 @@ sub_0800B80C: @ 0x0800B80C
 	thumb_func_start sub_0800B818
 sub_0800B818: @ 0x0800B818
 	push {lr}
-	bl sub_08072AD0
+	bl rand
 	lsls r0, r0, #1
 	lsrs r0, r0, #0x10
 	pop {r1}

@@ -9284,8 +9284,8 @@ _08072AB6:
 	pop {r4, r5, pc}
 	.align 2, 0
 
-	thumb_func_start sub_08072AC4
-sub_08072AC4: @ 0x08072AC4
+	thumb_func_start srand
+srand: @ 0x08072AC4
 	ldr r1, _08072ACC @ =0x0203A74C
 	ldr r1, [r1]
 	str r0, [r1, #0x58]
@@ -9293,8 +9293,8 @@ sub_08072AC4: @ 0x08072AC4
 	.align 2, 0
 _08072ACC: .4byte 0x0203A74C
 
-	thumb_func_start sub_08072AD0
-sub_08072AD0: @ 0x08072AD0
+	thumb_func_start rand
+rand: @ 0x08072AD0
 	ldr r0, _08072AE8 @ =0x0203A74C
 	ldr r2, [r0]
 	ldr r1, [r2, #0x58]
