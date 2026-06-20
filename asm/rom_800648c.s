@@ -915,7 +915,7 @@ sub_08006B48: @ 0x08006B48
 	bl sub_08006A84
 	movs r0, #1
 	bl sub_08004124
-	ldr r1, _08006BE0 @ =0x0808DB10
+	ldr r1, _08006BE0 @ =gBuildingFunctions_0808DB10
 	ldr r4, _08006BE4 @ =0x020335D0
 	ldrb r0, [r4, #3]
 	lsls r0, r0, #2
@@ -948,7 +948,7 @@ _08006BA8:
 	bx r0
 	.align 2, 0
 _08006BDC: .4byte 0x01006000
-_08006BE0: .4byte 0x0808DB10
+_08006BE0: .4byte gBuildingFunctions_0808DB10
 _08006BE4: .4byte 0x020335D0
 
 	thumb_func_start sub_08006BE8
@@ -3651,7 +3651,7 @@ sub_08007F8C: @ 0x08007F8C
 	adds r2, #8
 	adds r5, r1, #0
 	movs r6, #1
-	ldr r7, _08007FFC @ =0x0807F4C0
+	ldr r7, _08007FFC @ =gMenuScrollSpeed_0807F4C0
 _08007FB2:
 	ldrh r0, [r5, #2]
 	asrs r0, r3
@@ -3689,7 +3689,7 @@ _08007FCC:
 _08007FF0: .4byte 0x04000130
 _08007FF4: .4byte 0x000003FF
 _08007FF8: .4byte 0x030024B0
-_08007FFC: .4byte 0x0807F4C0
+_08007FFC: .4byte gMenuScrollSpeed_0807F4C0
 _08008000:
 	strb r0, [r2, #1]
 	strb r0, [r2]
@@ -4653,7 +4653,7 @@ _080086F6:
 	strb r0, [r5, #8]
 	movs r0, #0x2f
 	strb r0, [r5, #9]
-	ldr r1, _08008780 @ =0x0807F4C4
+	ldr r1, _08008780 @ =gGameStateInitFuncs_0807F4C4
 	ldrb r0, [r5, #8]
 	lsls r0, r0, #2
 	adds r0, r0, r1
@@ -4698,7 +4698,7 @@ _080086F6:
 _08008774: .4byte 0x03004400
 _08008778: .4byte 0x02034EA0
 _0800877C: .4byte 0x0300252F
-_08008780: .4byte 0x0807F4C4
+_08008780: .4byte gGameStateInitFuncs_0807F4C4
 _08008784: .4byte 0x01000800
 _08008788: .4byte 0x03002530
 _0800878C: .4byte sub_080087AC

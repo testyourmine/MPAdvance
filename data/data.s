@@ -7,7 +7,7 @@
 	.GLOBAL game_data_08076ae8
 game_data_08076ae8:
 	.INCBIN "baserom.gba", 0x76ae8, 0x77258-0x76ae8
-	
+
 	.GLOBAL gCmprGameGaddgetCode_08077258
 gCmprGameGaddgetCode_08077258:
 	@ Gaddgets
@@ -139,12 +139,172 @@ gCmprGameGaddgetCode_08077258:
 
 	.GLOBAL game_data_08077448
 game_data_08077448:
-	.INCBIN "baserom.gba", 0x77448, 0x2aba28-0x77448
+	.INCBIN "baserom.gba", 0x77448, 0x7f4c0-0x77448
+	
+	.GLOBAL gMenuScrollSpeed_0807F4C0
+gMenuScrollSpeed_0807F4C0:
+	.INCBIN "baserom.gba", 0x7f4c0, 0x7f4c4-0x7f4c0	@ 15 frames, 10 frames, 5 frames , 5 frames
+
+	.GLOBAL gGameStateInitFuncs_0807F4C4
+gGameStateInitFuncs_0807F4C4:
+	.4byte sub_080089DC  @ unknown/unused
+	.4byte sub_080605B4  @ title screen logos
+	.4byte sub_0802EB88  @ shroom city - setup
+	.4byte sub_08030220  @ shroom city - gameplay
+	.4byte sub_0802A03C  @ shroom city - map
+	.4byte sub_0802B67C  @ shroom city - quests menu
+	.4byte sub_0802CC2C  @ shroom city - characters menu
+	.4byte sub_0802E274  @ shroom city - character credits/diary? -- game shows what you did, no clue when this is used
+	.4byte sub_08006B48  @ shroom city - quest building
+	.4byte sub_08019290  @ shroom city - quest game 
+	.4byte sub_0800C0F0  @ minigame attack
+	.4byte sub_0800FD18  @ game room setup
+	.4byte sub_08011664  @ game room interior
+	.4byte sub_08012848  @ duel dash
+	.4byte sub_08015420  @ bowser land
+	.4byte sub_08017504  @ bowser land coaster
+	.4byte sub_08019264  @ unknown/unused
+	.4byte sub_08002358  @ minigame instructions?
+	.4byte sub_08058BFC  @ title screen
+	.4byte sub_0805AC9C  @ intro
+	.4byte sub_08062C78  @ play land - free play
+	.4byte sub_08063444  @ play land - minigame giveaway (link cable download play)
+	.4byte sub_080631F0  @ play land - minigame results
+	.4byte sub_0806A768  @ party land - duel link
+	.4byte sub_0806DCD4  @ party land - secret battle
+	.4byte sub_0806C570  @ party land - koopa kid battle
+	.4byte sub_0805E434  @ play land - gaddgets menu
+	.4byte sub_0805E7D0  @ play land - gaddget giveaway (link cable download play)
+	.4byte sub_0805E11C  @ gaddget shop
+	.4byte sub_08066484  @ inital passport setup screen
+	.4byte sub_08066874  @ passport menu
+	.4byte sub_0803BD74  @ shroom city - game end saving screen
+	.4byte sub_0803D820  @ shroom city - quit game/game over options
+	.4byte sub_0805BE1C  @ shroom city - credits related 1 (used when you beat final showdown)
+	.4byte sub_08006E64  @ save file initalization/save file loading (shows saving screen if you have no save data) -- BIG NOTE: if the game doesnt do this, itll act like no save data exists
+	.4byte sub_080071B0  @ minigame result saving screen
+	.4byte sub_08064040  @ main menu
+	.4byte sub_0805DB0C  @ bonus board
+	.4byte sub_0803DCA8  @ shroom city - credits related 2 (used when you beat final showdown)
+	.4byte sub_0806A424  @ credits
+	.4byte sub_0805F494  @ party land 100 player battle
+	.4byte sub_0805F898  @ party land 100 player attack
+	.4byte sub_08060474  @ party land - menu
+	.4byte sub_08060518  @ challenge land - menu
+	.4byte sub_080603BC  @ play land - menu
+	.4byte sub_08068BC4  @ play land - penguin race
+	.4byte sub_0806E6F4  @ health safety screen
+	.4byte 0x00000000
+
+	.GLOBAL game_data_0807f584
+game_data_0807f584:
+	.INCBIN "baserom.gba", 0x7f584, 0x87d60-0x7f584
+	
+	.GLOBAL gShroomSityStateTable_08087D60
+gShroomSityStateTable_08087D60:
+	.4byte sub_0803034C @ return from game
+	.4byte sub_0803042C @ save from menu -- fun little note: if you put this pointer to the koopa kid ones below, the game will reboot and send you to the health/safety screen when you find where a koopa kid wouldve been
+	.4byte sub_080308C0 @ begin turn 1
+	.4byte sub_080309B4 @ begin turn 2
+	.4byte sub_08030AB4 @ roll the dice state
+	.4byte sub_08030E78 @ movement state
+	.4byte sub_080313D0 @ currently moving
+	.4byte sub_080316B8 @ enter building dialouge
+	.4byte sub_08031B00 @ go back a space
+	.4byte sub_08031CC8 @ minus space
+	.4byte sub_08031F34 @ extra roll space
+	.4byte sub_08032088 @ menu
+	.4byte sub_080325C8 @ koopa kid appears - rock paper scissors/rochambeau
+	.4byte sub_08032A88 @ koopa kid appears - warp
+	.4byte sub_08032D04 @ uncleared quest alert
+	.4byte sub_08032F20 @ initial roll opening
+	.4byte sub_08033018 @ out of mushrooms
+	.4byte sub_08033304 @ quest complete
+	.4byte sub_08033ABC @ minigame wheel spin
+	.4byte sub_08033C98 @ minigame win
+	.4byte sub_08033DB8 @ koopa kid minigame
+	.4byte sub_0803402C @ koopa kid minigame win
+	.4byte sub_08034204 @ pipe house cutcene
+	.4byte sub_08034284 @ quest complete -- doesnt pan to the spot you completed seemingly (its not a unused one of these)
+
+	.GLOBAL game_data_08087dc0
+game_data_08087dc0:
+	.INCBIN "baserom.gba", 0x87dc0, 0x8db10-0x87dc0
+
+	.GLOBAL gBuildingFunctions_0808DB10
+gBuildingFunctions_0808DB10:
+	@ Town Area
+	.4byte sub_0804277C @ vending machines
+	.4byte sub_08042AA8 @ kind goomba
+	.4byte sub_08042DCC @ shroomlocks house
+	.4byte sub_080432C8 @ train station
+	.4byte sub_0804382C @ bob-omb avenue
+	.4byte sub_08043C58 @ town game room A
+	.4byte sub_08043F5C @ town game room B
+	.4byte sub_08044388 @ mushroom condos 1F
+	.4byte sub_08044864 @ mushroom condos 2F
+	.4byte sub_0804535C @ mushroom condos 3F
+	.4byte sub_08045D58 @ mushroom condos basement (blank option in the menu)
+	.4byte sub_0804599C @ mushroom condos rooftop
+	.4byte sub_08045E18 @ UNUSED - Early Pipe House -- final version is in the desert, this plays the town building theme
+	.4byte sub_080462A8 @ item shop
+	.4byte sub_08046720 @ chain chomp
+	.4byte sub_08047384 @ koopa bank
+	.4byte sub_08047BFC @ thwomp house
+	.4byte sub_080483F0 @ goombob manor
+	.4byte sub_08048850 @ bob-omba
+	.4byte sub_08049850 @ bowser mansion
+	.4byte sub_0804A590 @ bowser toy shop
+	.4byte sub_0804B1B4 @ bowser pad
+	@ Horror Area
+	.4byte sub_0804B870 @ mr i
+	.4byte sub_0804BCBC @ horror condo 1F
+	.4byte sub_0804C3B8 @ horror condo 2F
+	.4byte sub_0804C874 @ horror condo basement
+	.4byte sub_0804D8C0 @ boo cemetery
+	@ Desert Area
+	.4byte sub_0804DB08 @ pirana plant
+	.4byte sub_0804E008 @ mushroom stadium 
+	.4byte sub_0804E4CC @ mushroom field
+	.4byte sub_0804E690 @ the hammer
+	.4byte sub_0804E9E0 @ pokey
+	.4byte sub_0804ECA8 @ pyramid (gotten to via the hammer)
+	.4byte sub_0804F328 @ klepto ruins
+	.4byte sub_0804FD88 @ bowser stadium
+	@ Snow Area
+	.4byte sub_0805027C @ ice game room
+	.4byte sub_080505E0 @ ice stadium
+	.4byte sub_0805119C @ mt. frostbite
+	@ Jungle Area
+	.4byte sub_08051944 @ ukiki house
+	.4byte sub_08051E1C @ dance stage
+	.4byte sub_080522B8 @ jungle game hut
+	.4byte sub_0805273C @ petal house
+	.4byte sub_08052B90 @ spear thicket
+	.4byte sub_080530B0 @ loch dorrie
+	.4byte sub_08053B74 @ bowser hideout
+	.4byte sub_08054444 @ final bowser showdown -- notibly, its in the desert area as part of the pipe house, thats more a cave or mountain than a house, as evident by the unused pipe house
+	.4byte sub_08055128 @ bowser lab
+	@ Seaside Area
+	.4byte sub_080559D4 @ bowser game hall
+	.4byte sub_08056550 @ sushi cliff
+	.4byte sub_08056734 @ sandy beach
+	.4byte sub_08056B8C @ lakitu house
+	.4byte sub_08057114 @ mushroom library
+	.4byte sub_080575AC @ mushtoom pool
+	.4byte sub_080578BC @ mushroom beacon
+	.4byte sub_08057C8C @ mario vaundeville @36
+	.4byte sub_080580F8 @ duel tower 1F @37
+	.4byte sub_080584E0 @ duel tower 2F
+	.4byte sub_08058828 @ duel tower 3F
+
+	.GLOBAL game_data_0808dbf8
+game_data_0808dbf8:
+	.INCBIN "baserom.gba", 0x8dbf8, 0x2aba28-0x8dbf8
 
 	.GLOBAL game_text_pack_082aba28 @ houses the compressed game text
 game_text_082aba28:
 	.INCBIN "baserom.gba", 0x2aba28, 0x2d26d0-0x2aba28
-
 
 	.GLOBAL gaddget_code_082d26d0 @ houses the gaddgets compressed code
 gaddget_code_082d26d0:

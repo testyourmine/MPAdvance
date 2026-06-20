@@ -105,7 +105,7 @@ sub_08030220: @ 0x08030220
 	cmp r0, #0
 	bne _08030286
 	adds r4, r5, #0
-	ldr r5, _08030270 @ =0x08087D60
+	ldr r5, _08030270 @ =gShroomSityStateTable_08087D60
 _08030256:
 	ldr r1, [r4]
 	ldrh r0, [r1, #6]
@@ -119,7 +119,7 @@ _08030256:
 	b _08030278
 	.align 2, 0
 _0803026C: .4byte 0x030013C0
-_08030270: .4byte 0x08087D60
+_08030270: .4byte gShroomSityStateTable_08087D60
 _08030274:
 	subs r0, #1
 	strh r0, [r1, #6]
