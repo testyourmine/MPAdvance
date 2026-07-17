@@ -30,6 +30,8 @@
 	X(asm/land_menus.o) \
 	X(asm/company_logos.o) \
 	X(asm/rom_80606C8.o) \
+	X(asm/play_land/minigame_results.o) \
+	X(asm/play_land/minigame_giveaway.o) \
 	X(asm/main_menu.o) \
 	X(asm/passport.o) \
 	X(asm/play_land/penguin_race.o) \

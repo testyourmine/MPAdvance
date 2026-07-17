@@ -5,6 +5,122 @@
 	.ARM
 	.syntax unified
 
+	thumb_func_start sub_08063654
+sub_08063654: @ 0x08063654
+	push {r4, r5, lr}
+	bl sub_08007BD4
+	adds r5, r0, #0
+	ldr r1, _080636A0 @ =0x0807F240
+	ldrb r4, [r5]
+	lsls r0, r4, #1
+	adds r0, r0, r1
+	movs r1, #0
+	ldrsh r0, [r0, r1]
+	bl __floatsidf
+	ldr r2, _080636A4 @ =0x3FD33333
+	ldr r3, _080636A8 @ =0x33333333
+	bl __muldf3
+	ldr r2, _080636AC @ =0x40700000
+	ldr r3, _080636B0 @ =0x00000000
+	bl __adddf3
+	bl __fixdfsi
+	adds r2, r0, #0
+	adds r4, #6
+	strb r4, [r5]
+	ldr r0, _080636B4 @ =0x030044C4
+	ldr r0, [r0]
+	ldr r0, [r0, #0x48]
+	movs r1, #0x80
+	lsls r1, r1, #1
+	lsls r2, r2, #0x10
+	asrs r2, r2, #0x10
+	bl sub_08009E84
+	pop {r4, r5}
+	pop {r0}
+	bx r0
+	.align 2, 0
+_080636A0: .4byte 0x0807F240
+_080636A4: .4byte 0x3FD33333
+_080636A8: .4byte 0x33333333
+_080636AC: .4byte 0x40700000
+_080636B0: .4byte 0x00000000
+_080636B4: .4byte 0x030044C4
+
+	thumb_func_start sub_080636B8
+sub_080636B8: @ 0x080636B8
+	push {r4, r5, lr}
+	sub sp, #0xc
+	movs r4, #0
+	str r4, [sp, #4]
+	movs r1, #0xc0
+	lsls r1, r1, #0x13
+	ldr r2, _0806374C @ =0x01006000
+	add r0, sp, #4
+	bl CpuFastSet
+	ldr r0, _08063750 @ =0x030024E0
+	movs r1, #0xe2
+	lsls r1, r1, #5
+	strh r1, [r0]
+	strh r4, [r0, #2]
+	strh r4, [r0, #4]
+	ldr r1, _08063754 @ =0x00001E02
+	strh r1, [r0, #6]
+	ldr r1, _08063758 @ =0x00001F03
+	strh r1, [r0, #8]
+	strh r4, [r0, #0x12]
+	strh r4, [r0, #0xa]
+	strh r4, [r0, #0x14]
+	strh r4, [r0, #0xc]
+	strh r4, [r0, #0x16]
+	strh r4, [r0, #0xe]
+	strh r4, [r0, #0x18]
+	strh r4, [r0, #0x10]
+	movs r1, #0x80
+	lsls r1, r1, #3
+	movs r0, #0
+	bl sub_08006BE8
+	bl sub_08003F9C
+	movs r0, #0x80
+	lsls r0, r0, #1
+	str r0, [sp]
+	movs r0, #3
+	movs r1, #0x1c
+	movs r2, #0xe
+	movs r3, #0
+	bl sub_08004028
+	bl sub_080057C0
+	ldr r5, _0806375C @ =0x030044C4
+	movs r0, #0x58
+	bl sub_08007CE8
+	adds r1, r0, #0
+	str r1, [r5]
+	add r0, sp, #8
+	strh r4, [r0]
+	ldr r2, _08063760 @ =0x0100002C
+	bl CpuSet
+	ldr r0, _08063764 @ =sub_08063654
+	movs r1, #0x90
+	movs r2, #0
+	bl sub_08007968
+	ldr r1, [r5]
+	adds r1, #0x54
+	strh r0, [r1]
+	bl sub_08009DDC
+	ldr r1, [r5]
+	str r0, [r1, #0x48]
+	add sp, #0xc
+	pop {r4, r5}
+	pop {r0}
+	bx r0
+	.align 2, 0
+_0806374C: .4byte 0x01006000
+_08063750: .4byte 0x030024E0
+_08063754: .4byte 0x00001E02
+_08063758: .4byte 0x00001F03
+_0806375C: .4byte 0x030044C4
+_08063760: .4byte 0x0100002C
+_08063764: .4byte sub_08063654
+
 	thumb_func_start sub_08063768
 sub_08063768: @ 0x08063768
 	push {r4, lr}
