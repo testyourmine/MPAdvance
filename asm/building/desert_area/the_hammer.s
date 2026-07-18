@@ -117,7 +117,7 @@ _0804E6C0:
 	cmp r0, #0
 	beq _0804E716
 	movs r0, #0xd
-	bl sub_08040F18
+	bl EventSetupQuestMinigame_08040F18
 	b _0804E716
 	.align 2, 0
 _0804E6EC: .4byte sub_0804E5D0

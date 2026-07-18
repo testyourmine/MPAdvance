@@ -1885,8 +1885,8 @@ sub_08040F0C: @ 0x08040F0C
 	bx r0
 	.align 2, 0
 
-	thumb_func_start sub_08040F18
-sub_08040F18: @ 0x08040F18
+	thumb_func_start EventSetupQuestMinigame_08040F18
+EventSetupQuestMinigame_08040F18: @ 0x08040F18
 	push {lr}
 	lsls r0, r0, #0x18
 	lsrs r0, r0, #0x18

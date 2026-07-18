@@ -558,7 +558,7 @@ _08045A44:
 	cmp r0, #0
 	beq _08045A96
 	movs r0, #3
-	bl sub_08040F18
+	bl EventSetupQuestMinigame_08040F18
 	b _08045A96
 	.align 2, 0
 _08045A70: .4byte sub_08045580
