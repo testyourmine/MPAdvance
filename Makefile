@@ -26,9 +26,10 @@ OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 GBAFIX   := tools/gbafix/gbafix
 
 
-CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
+CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -fno-common
 CPPFLAGS := -I tools/agbcc/include -iquote include -nostdinc -undef
 ASFLAGS  := -mcpu=arm7tdmi -mthumb-interwork -I asminclude
+LIBS := tools/agbcc/lib/libgcc.a tools/agbcc/lib/libc.a
 
 
 #### Files ####
@@ -42,6 +43,8 @@ SFILES   := $(wildcard asm/*.s) $(wildcard asm/*/*.s) $(wildcard asm/*/*/*.s) $(
 OFILES   := $(SFILES:.s=.o) $(CFILES:.c=.o)
 DEP_FILES := $(CFILES:.c=.dep)
 
+src/eeprom.o: CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O1 -fhex-asm -g
+
 
 #### Main Targets ####
 
@@ -49,7 +52,7 @@ compare: $(ROM)
 	$(QUIET) md5sum -c checksum.md5
 
 clean:
-	$(RM) $(ROM) $(ELF) $(MAP) $(OFILES) $(DEP_FILES) src/*.s src/*/*.s src/*/*/*.s src/*/*/*/*.s
+	$(RM) $(ROM) $(ELF) $(MAP) $(OFILES) $(DEP_FILES) ldscript.txt src/*.s src/*/*.s src/*/*/*.s src/*/*/*/*.s
 
 # Compile a set of baserom objects for use with objdiff
 baserom-objs: compare
@@ -61,7 +64,7 @@ baserom-objs: compare
 
 $(ELF): $(OFILES) $(LDSCRIPT)
 	@echo 'Linking $@'
-	$(QUIET) $(LD) -T $(LDSCRIPT) -Map $(MAP) $(OFILES) tools/agbcc/lib/libgcc.a -o $@
+	$(QUIET) $(LD) -T $(LDSCRIPT) -Map $(MAP) $(LIBS) -o $@
 	$(QUIET) $(GBAFIX) $@ -t"$(TITLE)" -c$(GAME_CODE) -m$(MAKER_CODE) -r$(REVISION) --silent
 
 %.gba: %.elf
@@ -71,6 +74,7 @@ $(ELF): $(OFILES) $(LDSCRIPT)
 %.o: %.c
 	@echo 'Compiling $<'
 	$(QUIET) $(CPP) $(CPPFLAGS) -MMD -MF $(@:.o=.dep) -MT $@ $< | $(CC1) $(CC1FLAGS) -o $*.s
+	@printf "\t.text\n\t.align\t2, 0 @ Don't pad with nop\n" >> $*.s
 	$(QUIET) $(AS) $(ASFLAGS) $*.s -o $*.o
 
 %.o: %.s

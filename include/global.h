@@ -188,5 +188,6 @@ extern void sub_08043980();
 extern void sub_08043B04();
 extern void sub_08043BF4();
 
+#define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 
 #endif  // GUARD_GLOBAL_H
