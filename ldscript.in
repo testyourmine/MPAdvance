@@ -197,9 +197,12 @@ SECTIONS
 		*libc.a:syscalls.o(.bss);
 
 		. = 0x00001EE0; SoundMainRAM_Buffer = .;
+
 		. = 0x000024B0; gUnknown_030024B0 = .;
 		. = 0x000024E0; gUnknown_030024E0 = .;
+		. = 0x00002560; gIntrTable = .;
 		. = 0x00004400; gUnknown_03004400 = .;
+
 		. = 0x00004530; gSoundInfo = .;
 		. = 0x000054E0; gMPlayJumpTable = .;
 		. = 0x00005570; gCgbChans = .;

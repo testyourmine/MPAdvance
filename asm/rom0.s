@@ -2,28 +2,8 @@
 	.INCLUDE "macro.inc"
 
 	.SECTION .text
-	.ARM
-	.syntax unified
 
-	arm_func_start sub_08000228
-sub_08000228: @ 0x08000228
-	push {r8, sb, sl, fp}
-	mov ip, #0x4000000
-	ldr fp, _08000264 @ =0x03006210
-	add sl, fp, #0x28
-	mov sb, #1
-	mov r8, #0
-	strb r8, [ip, #0x208]
-	ldm sl, {r0, r1}
-	stm sl!, {r1}
-	stm sl!, {r0}
-	ldrb r0, [fp, #5]
-	strb r8, [fp, #5]
-	strb sb, [ip, #0x208]
-	pop {r8, sb, sl, fp}
-	bx lr
-	.align 2, 0
-_08000264: .4byte 0x03006210
+	.syntax unified
 
 	thumb_func_start sub_08000268
 sub_08000268: @ 0x08000268
