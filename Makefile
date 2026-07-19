@@ -26,7 +26,7 @@ OBJCOPY  := $(DEVKITARM)/bin/arm-none-eabi-objcopy
 GBAFIX   := tools/gbafix/gbafix
 
 
-CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -O2 -fhex-asm -fno-common
+CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O2 -fhex-asm -fno-common
 CPPFLAGS := -I tools/agbcc/include -iquote include -nostdinc -undef
 ASFLAGS  := -mcpu=arm7tdmi -mthumb-interwork -I asminclude
 
@@ -41,6 +41,8 @@ CFILES   := $(wildcard src/*.c) $(wildcard src/*/*.c) $(wildcard src/*/*/*.c) $(
 SFILES   := $(wildcard asm/*.s) $(wildcard asm/*/*.s) $(wildcard asm/*/*/*.s) $(wildcard asm/*/*/*/*.s) $(wildcard data/*.s)
 OFILES   := $(SFILES:.s=.o) $(CFILES:.c=.o)
 DEP_FILES := $(CFILES:.c=.dep)
+
+src/eeprom.o: CC1FLAGS := -mthumb-interwork -Wimplicit -Wparentheses -Werror -O1 -fhex-asm -g
 
 
 #### Main Targets ####

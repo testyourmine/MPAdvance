@@ -1,109 +1,6 @@
 gNumMusicPlayers = 7;
 gMaxLines = 0;
 
-#define OBJECT_FILE_LIST \
-	X(asm/rom_header.o) \
-	X(asm/crt0.o) \
-	X(asm/rom0.o) \
-	X(asm/minigame_instructions.o) \
-	X(asm/rom_80025B8.o) \
-	X(asm/text_related_8005650.o) \
-	X(asm/rom_800648c.o) \
-	X(asm/rom1.o) \
-	X(asm/rom2.o) \
-	X(asm/rom3.o) \
-	X(asm/rom4.o) \
-	X(asm/building/seaside_area/mario_vaudeville_related.o) \
-	X(asm/building/town_area/early_pipe_house_related.o) \
-	X(asm/building/town_area/bob_omb_avenue_related.o) \
-	X(asm/building/rom_8042608.o) \
-	X(asm/building/town_area/vending_machines.o) \
-	X(asm/building/rom_80427E0.o) \
-	X(asm/building/town_area/goomba_house.o) \
-	X(asm/building/town_area/shroomlock_house.o) \
-	X(asm/building/town_area/train_station.o) \
-	X(asm/building/town_area/bob_omb_avenue.o) \
-	X(src/building/town_area/town_game_room_a.o) \
-	X(src/building/town_area/town_game_room_b.o) \
-	X(asm/building/town_area/mushroom_condo_1f.o) \
-	X(asm/building/town_area/mushroom_condo_2f.o) \
-	X(asm/building/town_area/mushroom_condo_3f.o) \
-	X(asm/building/town_area/mushroom_condo_rooftop.o) \
-	X(asm/building/town_area/mushroom_condo_basement.o) \
-	X(asm/building/town_area/early_pipe_house.o) \
-	X(asm/building/town_area/item_shop.o) \
-	X(asm/building/town_area/chain_chomp.o) \
-	X(asm/building/town_area/koopa_bank.o) \
-	X(asm/building/town_area/thwomp_house.o) \
-	X(asm/building/town_area/goombob_manor.o) \
-	X(asm/building/town_area/bob_omba.o) \
-	X(asm/building/town_area/bowser_mansion.o) \
-	X(asm/building/town_area/bowser_toy_shop.o) \
-	X(asm/building/town_area/bowser_pad.o) \
-	X(asm/building/horror_area/mr_i.o) \
-	X(asm/building/horror_area/horror_condo_1f.o) \
-	X(asm/building/horror_area/horror_condo_2f.o) \
-	X(asm/building/horror_area/horror_condo_basement.o) \
-	X(asm/building/horror_area/boo_cemetery.o) \
-	X(asm/building/desert_area/piranha_plant.o) \
-	X(asm/building/desert_area/mushroom_stadium.o) \
-	X(asm/building/desert_area/mushroom_field.o) \
-	X(asm/building/desert_area/the_hammer.o) \
-	X(asm/building/desert_area/pokey.o) \
-	X(asm/building/desert_area/game_mage_pyramid.o) \
-	X(asm/building/desert_area/klepto_ruins.o) \
-	X(asm/building/desert_area/bowser_stadium.o) \
-	X(asm/building/snow_area/ice_game_room.o) \
-	X(asm/building/snow_area/ice_stadium.o) \
-	X(asm/building/snow_area/mt_frostbite.o) \
-	X(asm/building/jungle_area/ukiki_house.o) \
-	X(asm/building/jungle_area/dance_stage.o) \
-	X(asm/building/jungle_area/jungle_game_hut.o) \
-	X(asm/building/jungle_area/petal_house.o) \
-	X(asm/building/jungle_area/spear_thicket.o) \
-	X(asm/building/jungle_area/loch_dorrie.o) \
-	X(asm/building/jungle_area/bowser_hideout.o) \
-	X(asm/building/jungle_area/bowser_final_showdown.o) \
-	X(asm/building/jungle_area/bowser_lab.o) \
-	X(asm/building/seaside_area/bowser_game_hall.o) \
-	X(asm/building/seaside_area/sushi_cliff.o) \
-	X(asm/building/seaside_area/sandy_beach.o) \
-	X(asm/building/seaside_area/lakitu_house.o) \
-	X(asm/building/seaside_area/mushroom_library.o) \
-	X(asm/building/seaside_area/mushroom_pool.o) \
-	X(asm/building/seaside_area/mushroom_beacon.o) \
-	X(asm/building/seaside_area/mario_vaudeville.o) \
-	X(asm/building/seaside_area/duel_tower_1f.o) \
-	X(asm/building/seaside_area/duel_tower_2f.o) \
-	X(asm/building/seaside_area/duel_tower_3f.o) \
-	X(asm/title_screen.o) \
-	X(asm/opening.o) \
-	X(asm/rom_805BC64.o) \
-	X(asm/bonus_board.o) \
-	X(asm/play_land/gaddgets_menus.o) \
-	X(asm/party_land/hundred_player.o) \
-	X(asm/land_menus.o) \
-	X(asm/company_logos.o) \
-	X(asm/rom_80606C8.o) \
-	X(asm/play_land/minigame_results.o) \
-	X(asm/play_land/minigame_giveaway.o) \
-	X(asm/main_menu.o) \
-	X(asm/passport.o) \
-	X(asm/play_land/penguin_race.o) \
-	X(asm/credits.o) \
-	X(asm/party_land/duel_link.o) \
-	X(asm/party_land/koopa_kid_battle.o) \
-	X(asm/party_land/secret_battle.o) \
-	X(asm/party_land/party_land_link_related.o) \
-	X(asm/health_and_safety.o) \
-	X(asm/m4a0.o) \
-	X(src/m4a.o) \
-	X(asm/libagbsyscall.o) \
-	X(asm/rom_806E8AC.o) \
-	X(data/data.o) \
-	X(src/data/m4a_tables.o) \
-	X(data/data1.o) \
-
 OUTPUT_ARCH(arm)
 SECTIONS
 {
@@ -111,33 +8,120 @@ SECTIONS
 	.text (READONLY) :
 	ALIGN(4)
 	{
-#define X(file) file(.text);
-		OBJECT_FILE_LIST
-#undef X
-		*(.glue_7t);
+		asm/rom_header.o(.text);
+		asm/crt0.o(.text);
+		asm/rom0.o(.text);
+		asm/minigame_instructions.o(.text);
+		asm/rom_80025B8.o(.text);
+		asm/text_related_8005650.o(.text);
+		asm/rom_800648c.o(.text);
+		asm/rom1.o(.text);
+		asm/rom2.o(.text);
+		asm/rom3.o(.text);
+		asm/rom4.o(.text);
+		asm/building/seaside_area/mario_vaudeville_related.o(.text);
+		asm/building/town_area/early_pipe_house_related.o(.text);
+		asm/building/town_area/bob_omb_avenue_related.o(.text);
+		asm/building/rom_8042608.o(.text);
+		asm/building/town_area/vending_machines.o(.text);
+		asm/building/rom_80427E0.o(.text);
+		asm/building/town_area/goomba_house.o(.text);
+		asm/building/town_area/shroomlock_house.o(.text);
+		asm/building/town_area/train_station.o(.text);
+		asm/building/town_area/bob_omb_avenue.o(.text);
+		src/building/town_area/town_game_room_a.o(.text);
+		src/building/town_area/town_game_room_b.o(.text);
+		asm/building/town_area/mushroom_condo_1f.o(.text);
+		asm/building/town_area/mushroom_condo_2f.o(.text);
+		asm/building/town_area/mushroom_condo_3f.o(.text);
+		asm/building/town_area/mushroom_condo_rooftop.o(.text);
+		asm/building/town_area/mushroom_condo_basement.o(.text);
+		asm/building/town_area/early_pipe_house.o(.text);
+		asm/building/town_area/item_shop.o(.text);
+		asm/building/town_area/chain_chomp.o(.text);
+		asm/building/town_area/koopa_bank.o(.text);
+		asm/building/town_area/thwomp_house.o(.text);
+		asm/building/town_area/goombob_manor.o(.text);
+		asm/building/town_area/bob_omba.o(.text);
+		asm/building/town_area/bowser_mansion.o(.text);
+		asm/building/town_area/bowser_toy_shop.o(.text);
+		asm/building/town_area/bowser_pad.o(.text);
+		asm/building/horror_area/mr_i.o(.text);
+		asm/building/horror_area/horror_condo_1f.o(.text);
+		asm/building/horror_area/horror_condo_2f.o(.text);
+		asm/building/horror_area/horror_condo_basement.o(.text);
+		asm/building/horror_area/boo_cemetery.o(.text);
+		asm/building/desert_area/piranha_plant.o(.text);
+		asm/building/desert_area/mushroom_stadium.o(.text);
+		asm/building/desert_area/mushroom_field.o(.text);
+		asm/building/desert_area/the_hammer.o(.text);
+		asm/building/desert_area/pokey.o(.text);
+		asm/building/desert_area/game_mage_pyramid.o(.text);
+		asm/building/desert_area/klepto_ruins.o(.text);
+		asm/building/desert_area/bowser_stadium.o(.text);
+		asm/building/snow_area/ice_game_room.o(.text);
+		asm/building/snow_area/ice_stadium.o(.text);
+		asm/building/snow_area/mt_frostbite.o(.text);
+		asm/building/jungle_area/ukiki_house.o(.text);
+		asm/building/jungle_area/dance_stage.o(.text);
+		asm/building/jungle_area/jungle_game_hut.o(.text);
+		asm/building/jungle_area/petal_house.o(.text);
+		asm/building/jungle_area/spear_thicket.o(.text);
+		asm/building/jungle_area/loch_dorrie.o(.text);
+		asm/building/jungle_area/bowser_hideout.o(.text);
+		asm/building/jungle_area/bowser_final_showdown.o(.text);
+		asm/building/jungle_area/bowser_lab.o(.text);
+		asm/building/seaside_area/bowser_game_hall.o(.text);
+		asm/building/seaside_area/sushi_cliff.o(.text);
+		asm/building/seaside_area/sandy_beach.o(.text);
+		asm/building/seaside_area/lakitu_house.o(.text);
+		asm/building/seaside_area/mushroom_library.o(.text);
+		asm/building/seaside_area/mushroom_pool.o(.text);
+		asm/building/seaside_area/mushroom_beacon.o(.text);
+		asm/building/seaside_area/mario_vaudeville.o(.text);
+		asm/building/seaside_area/duel_tower_1f.o(.text);
+		asm/building/seaside_area/duel_tower_2f.o(.text);
+		asm/building/seaside_area/duel_tower_3f.o(.text);
+		asm/title_screen.o(.text);
+		asm/opening.o(.text);
+		asm/rom_805BC64.o(.text);
+		asm/bonus_board.o(.text);
+		asm/play_land/gaddgets_menus.o(.text);
+		asm/party_land/hundred_player.o(.text);
+		asm/land_menus.o(.text);
+		asm/company_logos.o(.text);
+		asm/rom_80606C8.o(.text);
+		asm/play_land/minigame_results.o(.text);
+		asm/play_land/minigame_giveaway.o(.text);
+		asm/main_menu.o(.text);
+		asm/passport.o(.text);
+		asm/play_land/penguin_race.o(.text);
+		asm/credits.o(.text);
+		asm/party_land/duel_link.o(.text);
+		asm/party_land/koopa_kid_battle.o(.text);
+		asm/party_land/secret_battle.o(.text);
+		asm/party_land/party_land_link_related.o(.text);
+		asm/health_and_safety.o(.text);
+		asm/m4a0.o(.text);
+		src/m4a.o(.text);
+		asm/libagbsyscall.o(.text);
+		src/eeprom.o(.text);
+		asm/rom_806E8AC.o(.text);
 	} = 0
-
-	/* Don't link these files' rodata for now, since it doesn't match.
-	 * This needs to be fixed eventually!!! */
-	/DISCARD/ :
-	{
-
-	}
 
 	.rodata (READONLY) :
 	ALIGN(4)
 	{
-#define X(file) file(.rodata);
-		OBJECT_FILE_LIST
-#undef X
+		data/data.o(.rodata);
+		src/data/m4a_tables.o(.rodata);
+		data/data1.o(.rodata);
+		src/eeprom.o(.rodata);
+		data/data2.o(.rodata);
 	}
 
 	.data (READONLY) :
 	ALIGN(4)
 	{
-#define X(file) file(.data);
-		OBJECT_FILE_LIST
-#undef X
 	}
 
 	. = 0x02000000;
@@ -157,6 +141,7 @@ SECTIONS
 		. = 0x000054E0; gMPlayJumpTable = .;
 		. = 0x00005570; gCgbChans = .;
 		. = 0x000057F0; gMPlayMemAccArea = .;
+		. = 0x00005840; gEEPROMConfig = .;
 	} = 0
 
     /* Discard everything not specifically mentioned above. */
