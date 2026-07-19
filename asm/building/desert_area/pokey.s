@@ -25,12 +25,12 @@ sub_0804E730: @ 0x0804E730
 	movs r1, #0x78
 	movs r2, #0x40
 	movs r3, #0x14
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x8f
 	lsls r0, r0, #1
 	bl EventPlaySFX_080410E0
@@ -324,11 +324,11 @@ _0804EA5C:
 	cmp r0, #0
 	bne _0804EA9E
 	movs r0, #0xa6
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xa7
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xa8
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xa9
 	bl UnsetEventFlag_080406D0
 _0804EA9E:

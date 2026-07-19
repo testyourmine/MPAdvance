@@ -872,7 +872,7 @@ UnsetEventFlag_080406D0: @ 0x080406D0
 	push {lr}
 	lsls r0, r0, #0x10
 	lsrs r0, r0, #0x10
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	bl sub_080406AC
 	pop {r0}
 	bx r0
@@ -891,8 +891,8 @@ EventSetFlag_080406E4: @ 0x080406E4
 	.align 2, 0
 _080406F8: .4byte 0x020335F8
 
-	thumb_func_start EventUnsetFlag_080406D0
-EventUnsetFlag_080406D0: @ 0x080406FC
+	thumb_func_start EventUnsetFlag_080406FC
+EventUnsetFlag_080406FC: @ 0x080406FC
 	push {lr}
 	adds r1, r0, #0
 	lsls r1, r1, #0x10
@@ -3236,8 +3236,8 @@ _08041934:
 	pop {r1}
 	bx r1
 
-	thumb_func_start sub_08041938
-sub_08041938: @ 0x08041938
+	thumb_func_start EventMoveChara_08041938
+EventMoveChara_08041938: @ 0x08041938
 	push {r4, r5, r6, r7, lr}
 	mov r7, sl
 	mov r6, sb

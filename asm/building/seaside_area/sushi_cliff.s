@@ -135,14 +135,14 @@ _08055C00:
 	movs r1, #0x40
 	movs r2, #0
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x3c
 	bl EventSleep_08040690
 	movs r0, #2
 	movs r1, #0x40
 	movs r2, #0x38
 	movs r3, #0xc
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x8f
 	lsls r0, r0, #1
 	bl EventPlaySFX_080410E0
@@ -546,7 +546,7 @@ _08056080:
 	movs r1, #0xb4
 	movs r2, #0x70
 	movs r3, #0xa
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _080563FC @ =0x0000011B
 	bl EventPlaySFX_080410E0
 	movs r0, #0x3c
@@ -804,7 +804,7 @@ _08056080:
 	movs r0, #0
 	movs r2, #0x68
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #1
 	movs r1, #0
@@ -837,7 +837,7 @@ _08056080:
 	movs r1, #0
 	movs r2, #0x38
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0
 	movs r2, #5
@@ -936,11 +936,11 @@ _0805645C:
 	ldr r0, _080564E0 @ =0x0005004B
 	bl EventWinMesSet_08041058
 	movs r0, #0x12
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x13
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x14
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x15
 	bl UnsetEventFlag_080406D0
 _080564C8:

@@ -275,13 +275,13 @@ sub_080569E4: @ 0x080569E4
 	ldr r0, _08056AA4 @ =0x001C0035
 	bl EventWinMesSet_08041058
 	movs r0, #0x6e
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x6f
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x70
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x71
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x72
 	bl UnsetEventFlag_080406D0
 	b _08056B28

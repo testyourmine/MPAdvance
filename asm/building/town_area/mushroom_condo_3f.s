@@ -137,7 +137,7 @@ _08044C80:
 	movs r1, #0x50
 	movs r2, #0x68
 	movs r3, #0x40
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0
 	movs r2, #5
@@ -270,7 +270,7 @@ _08044C80:
 	movs r1, #0xf0
 	movs r2, #0x50
 	movs r3, #0x20
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x54
 	movs r2, #0x40

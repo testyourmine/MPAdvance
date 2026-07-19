@@ -15,27 +15,27 @@ sub_08052CBC: @ 0x08052CBC
 	movs r1, #0x78
 	movs r2, #0xc8
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x78
 	movs r2, #0xb4
 	movs r3, #0x64
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x78
 	movs r2, #0x96
 	movs r3, #0x50
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x78
 	movs r2, #0x82
 	movs r3, #0x3c
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x78
 	movs r2, #0x78
 	movs r3, #0x28
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	pop {r0}
 	bx r0
 	.align 2, 0
@@ -59,7 +59,7 @@ sub_08052D08: @ 0x08052D08
 	movs r1, #0xc0
 	movs r2, #0x58
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0
 	movs r2, #3
@@ -176,7 +176,7 @@ sub_08052E48: @ 0x08052E48
 	movs r1, #0x30
 	movs r2, #0x58
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x8f
 	lsls r0, r0, #1
 	bl EventPlaySFX_080410E0
@@ -224,12 +224,12 @@ sub_08052E48: @ 0x08052E48
 	movs r1, #0x30
 	movs r2, #0x48
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x30
 	movs r2, #0x5a
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0xf
@@ -242,7 +242,7 @@ sub_08052E48: @ 0x08052E48
 	movs r1, #0
 	movs r2, #0x5a
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x3c
 	bl EventSleep_08040690
 	bl EventWinInit_08040fe8
@@ -358,7 +358,7 @@ sub_08053020: @ 0x08053020
 	movs r1, #0x78
 	movs r2, #0xc8
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	pop {r0}
 	bx r0
 	.align 2, 0

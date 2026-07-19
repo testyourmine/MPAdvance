@@ -1020,11 +1020,11 @@ _0804A39C:
 	ldr r0, _0804A490 @ =0x001E0048
 	bl EventWinMesSet_08041058
 	movs r0, #0x77
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x78
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x79
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x7a
 	bl UnsetEventFlag_080406D0
 _0804A472:
@@ -1270,11 +1270,11 @@ _0804A6D8: .4byte sub_080499FC
 _0804A6DC: .4byte sub_08049EA8
 _0804A6E0:
 	movs r0, #0x77
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x78
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x79
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x7a
 	bl UnsetEventFlag_080406D0
 	b _0804A722

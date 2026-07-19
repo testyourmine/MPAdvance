@@ -14,12 +14,12 @@ sub_08048560: @ 0x08048560
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #8
 	bl EventWinSpeakerSet_08041018

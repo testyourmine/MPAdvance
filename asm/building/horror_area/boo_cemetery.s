@@ -87,7 +87,7 @@ _0804CA88:
 	adds r1, r4, #0
 	movs r2, #0x68
 	movs r3, #0xc
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _0804CAD4 @ =0x0808E60C
 	adds r1, r4, #0
 	movs r2, #0x6a
@@ -319,7 +319,7 @@ _0804CCAC:
 	movs r1, #0x50
 	movs r2, #0x68
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #5
@@ -942,7 +942,7 @@ _0804D2E4:
 	movs r1, #0
 	movs r2, #0x68
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #5
 	bl sub_080417E0
 	movs r0, #5
@@ -961,7 +961,7 @@ _0804D2E4:
 	movs r1, #0
 	movs r2, #0x68
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0
@@ -1128,11 +1128,11 @@ _0804D458:
 	movs r3, #0
 	bl EventAnimateChara_080418C8
 	movs r0, #7
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #9
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #8
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xa
 	bl UnsetEventFlag_080406D0
 _0804D55C:

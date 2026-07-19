@@ -542,11 +542,11 @@ _0804F9FC:
 	ldr r0, _0804FAC8 @ =0x00110037
 	bl EventWinMesSet_08041058
 	movs r0, #0x42
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x43
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x44
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x45
 	bl UnsetEventFlag_080406D0
 _0804FAAA:
@@ -733,11 +733,11 @@ _0804FC14:
 	ldr r0, _0804FCCC @ =0x00110037
 	bl EventWinMesSet_08041058
 	movs r0, #0x42
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x43
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x44
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x45
 	bl UnsetEventFlag_080406D0
 _0804FCAE:

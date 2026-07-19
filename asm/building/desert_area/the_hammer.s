@@ -55,11 +55,11 @@ sub_0804E638: @ 0x0804E638
 	ldr r0, _0804E660 @ =0x00230005
 	bl EventWinMesSet_08041058
 	movs r0, #0x87
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x8a
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x8b
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	pop {r0}
 	bx r0
 	.align 2, 0

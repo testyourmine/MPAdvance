@@ -14,12 +14,12 @@ sub_080433E4: @ 0x080433E4
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #7
 	bl EventWinSpeakerSet_08041018
@@ -271,13 +271,13 @@ sub_08043620: @ 0x08043620
 	ldr r0, _080436EC @ =0x00170039
 	bl EventWinMesSet_08041058
 	movs r0, #0x59
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x5c
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x5a
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x5b
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x5d
 	bl UnsetEventFlag_080406D0
 	b _0804376A
@@ -299,12 +299,12 @@ _080436F0:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08043774 @ =0x0017002B
 	bl EventWinMesSet_08041058
 	ldr r0, _08043778 @ =0x0017002C
@@ -362,12 +362,12 @@ sub_0804379C: @ 0x0804379C
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #7
 	bl EventWinSpeakerSet_08041018

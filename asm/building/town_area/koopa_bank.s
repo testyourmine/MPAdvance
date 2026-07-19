@@ -109,12 +109,12 @@ _080468DA:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #1
@@ -129,7 +129,7 @@ _080468DA:
 	movs r1, #0x58
 	movs r2, #0x68
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0
 	movs r2, #5
@@ -271,12 +271,12 @@ _080468DA:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #1
@@ -589,12 +589,12 @@ sub_08046D28: @ 0x08046D28
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #9
 	bl EventWinSpeakerSet_08041018
 	ldr r0, _0804712C @ =0x00010042
@@ -673,12 +673,12 @@ _08046EB2:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #9
 	bl EventWinSpeakerSet_08041018
 	ldr r0, _08047140 @ =0x00010046
@@ -715,12 +715,12 @@ _08046EB2:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #9
 	bl EventWinSpeakerSet_08041018
 	ldr r0, _08047158 @ =0x0001004C
@@ -739,7 +739,7 @@ _08046EB2:
 	movs r1, #0x3c
 	movs r2, #0x50
 	movs r3, #0x20
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #0x21
 	bl EventWinSpeakerSet_08041018
@@ -786,12 +786,12 @@ _08046EB2:
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl EventWinInit_08040fe8
 	movs r0, #9
 	bl EventWinSpeakerSet_08041018
@@ -901,7 +901,7 @@ _0804718C:
 	movs r1, #0
 	movs r2, #0x50
 	movs r3, #0x20
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl sub_080417E0
 	movs r0, #2
@@ -934,7 +934,7 @@ _0804718C:
 	movs r1, #0
 	movs r2, #0x68
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0
 	movs r2, #5
@@ -1022,13 +1022,13 @@ _08047260:
 	ldr r0, _08047314 @ =0x00010061
 	bl EventWinMesSet_08041058
 	movs r0, #0
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #1
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #2
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #3
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #6
 	bl UnsetEventFlag_080406D0
 _080472F8:

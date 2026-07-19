@@ -76,8 +76,8 @@ void TownGameRoomA_ScriptAfterGame_08043B04(void) {
 		EventWinMesSet_08041058(0x1F001C); // "You can try again if you want." (dialouge bank 0x1f, entry 28)
 		EventAnimateChara_080418C8(0, 0, 4, 0xFF); // monty mole crying
 		EventWinMesSet_08041058(0x1F001D); // "I'm feeling really low right now." (dialouge bank 0x1f, entry 29)
-		EventUnsetFlag_080406D0(0x7B);
-		EventUnsetFlag_080406D0(0x7C);
+		EventUnsetFlag_080406FC(0x7B);
+		EventUnsetFlag_080406FC(0x7C);
 		UnsetEventFlag_080406D0(0x7D);
 	}
 	

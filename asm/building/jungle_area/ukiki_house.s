@@ -90,14 +90,14 @@ _0805149C:
 	movs r1, #0xc0
 	movs r2, #0x2c
 	movs r3, #0x5a
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x3c
 	bl EventSleep_08040690
 	movs r0, #2
 	movs r1, #0xc0
 	movs r2, #0x58
 	movs r3, #0x5a
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0
 	movs r2, #7
@@ -107,7 +107,7 @@ _0805149C:
 	movs r1, #0xa0
 	movs r2, #0x58
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	movs r1, #0
 	movs r2, #1
@@ -184,7 +184,7 @@ _0805149C:
 	movs r1, #0x98
 	movs r2, #0x58
 	movs r3, #0x3c
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #2
@@ -194,7 +194,7 @@ _0805149C:
 	movs r1, #0x90
 	movs r2, #0x58
 	movs r3, #0x3c
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	bl sub_08041560
 	movs r0, #2
 	movs r1, #0

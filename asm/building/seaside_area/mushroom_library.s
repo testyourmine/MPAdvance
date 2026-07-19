@@ -98,12 +98,12 @@ _08056D68:
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08056E04 @ =0x002F000E
 	bl EventWinMesSet_08041058
 	ldr r0, _08056E08 @ =0x002F000F
@@ -132,12 +132,12 @@ _08056E14:
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08056E60 @ =0x002F0012
 	bl EventWinMesSet_08041058
 	ldr r0, _08056E64 @ =0x002F0013
@@ -205,12 +205,12 @@ _08056ECC:
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08056F3C @ =0x002F001C
 	bl EventWinMesSet_08041058
 	ldr r0, _08056F40 @ =0x002F001D
@@ -252,12 +252,12 @@ _08056F58:
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08056FBC @ =0x002F0023
 	bl EventWinMesSet_08041058
 	ldr r0, _08056FC0 @ =0x002F0024
@@ -297,24 +297,24 @@ _08056FD8:
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	adds r0, r4, #0
 	bl EventPlaySFX_080410E0
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x46
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0x7a
 	movs r2, #0x56
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	ldr r0, _08057070 @ =0x002F002A
 	bl EventWinMesSet_08041058
 	ldr r0, _08057074 @ =0x002F002B
@@ -479,11 +479,11 @@ _080571A4:
 	cmp r0, #0
 	bne _080571E6
 	movs r0, #0xae
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xaf
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xb0
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0xb1
 	bl UnsetEventFlag_080406D0
 _080571E6:

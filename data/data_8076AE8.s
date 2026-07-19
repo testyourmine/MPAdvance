@@ -272,9 +272,9 @@ gBuildingFunctions_0808DB10:
 	.4byte sub_0804F328 @ klepto ruins
 	.4byte sub_0804FD88 @ bowser stadium
 	@ Snow Area
-	.4byte sub_0805027C @ ice game room
-	.4byte sub_080505E0 @ ice stadium
-	.4byte sub_0805119C @ mt. frostbite
+	.4byte IceGameRoomInit_0805027C @ ice game room
+	.4byte IceStadiumInit_080505E0 @ ice stadium
+	.4byte MtFrostbiteInit_0805119C @ mt. frostbite
 	@ Jungle Area
 	.4byte sub_08051944 @ ukiki house
 	.4byte sub_08051E1C @ dance stage
@@ -313,7 +313,51 @@ gUnknown_0808DD54:
 
 	.GLOBAL gUnknown_0808DD7C @ Town Game Room B background pointers
 gUnknown_0808DD7C:
-	.INCBIN "baserom.gba", 0x8DD7C, 0x8E9AC-0x8DD7C
+	.INCBIN "baserom.gba", 0x8DD7C, 0x8E204-0x8DD7C
+	
+	.GLOBAL gUnknown_0808E204 @ Ice Game Room background pointers
+gUnknown_0808E204:
+	.INCBIN "baserom.gba", 0x8E204, 0x8E22C-0x8E204	
+	
+	.GLOBAL gUnknown_0808E22C @ Ice Stadium background pointers
+gUnknown_0808E22C:
+	.INCBIN "baserom.gba", 0x8E22C, 0x8E254-0x8E22C	
+	
+	.GLOBAL gUnknown_0808E254
+gUnknown_0808E254:
+	.INCBIN "baserom.gba", 0x8E254, 0x8E62C-0x8E254
+	
+	.GLOBAL gUnknown_0808E62C
+gUnknown_0808E62C:
+	.INCBIN "baserom.gba", 0x8E62C, 0x8E6BC-0x8E62C
+	
+	.GLOBAL gUnknown_0808E6BC @ Character particles sprite pointers
+gUnknown_0808E6BC:
+	.INCBIN "baserom.gba", 0x8E6BC, 0x8E70C-0x8E6BC	
+
+	.GLOBAL gUnknown_0808E70C
+gUnknown_0808E70C:
+	.INCBIN "baserom.gba", 0x8E70C, 0x8E72C-0x8E70C
+	
+	.GLOBAL gUnknown_0808E72C
+gUnknown_0808E72C:
+	.INCBIN "baserom.gba", 0x8E72C, 0x8E7BC-0x8E72C
+	
+	.GLOBAL gUnknown_0808E7BC
+gUnknown_0808E7BC:
+	.INCBIN "baserom.gba", 0x8E7BC, 0x8E7CC-0x8E7BC
+	
+	.GLOBAL gUnknown_0808E7CC
+gUnknown_0808E7CC:
+	.INCBIN "baserom.gba", 0x8E7CC, 0x8E86C-0x8E7CC
+
+	.GLOBAL gUnknown_0808E86C @ Ice Game Room Penguin sprite pointers
+gUnknown_0808E86C:
+	.INCBIN "baserom.gba", 0x8E86C, 0x8E99C-0x8E86C
+	
+	.GLOBAL gUnknown_0808E99C @ Ice Stadium Snowman sprite pointers
+gUnknown_0808E99C:
+	.INCBIN "baserom.gba", 0x8E99C, 0x8E9AC-0x8E99C
 	
 	.GLOBAL gUnknown_0808E9AC
 gUnknown_0808E9AC:
@@ -321,4 +365,16 @@ gUnknown_0808E9AC:
 	 
 	.GLOBAL gUnknown_0808E9BC @ Town Game Room B amp sprite pointers
 gUnknown_0808E9BC:
-	.INCBIN "baserom.gba", 0x8E9BC, 0x1AEE9C-0x8E9BC
+	.INCBIN "baserom.gba", 0x8E9BC, 0x8EA6C-0x8E9BC
+	
+	.GLOBAL gUnknown_0808EA6C
+gUnknown_0808EA6C:
+	.INCBIN "baserom.gba", 0x8EA6C, 0x14F70C-0x8EA6C
+	 
+	.GLOBAL gUnknown_0814F70C
+gUnknown_0814F70C:
+	.INCBIN "baserom.gba", 0x14F70C, 0x14F72C-0x14F70C
+	 
+	.GLOBAL gUnknown_0814F72C
+gUnknown_0814F72C:
+	.INCBIN "baserom.gba", 0x14F72C, 0x1AEE9C-0x14F72C

@@ -64,8 +64,8 @@ void TownGameRoomB_ScriptAfterGame_08043E54(void) {
     EventWinMesSet_08041058(0x200018); // "Sorry, I can't give it to you." (dialouge bank 0x20, entry 24)
     EventWinMesSet_08041058(0x200019); // "I'm a loser, and you messed up this quest." (dialouge bank 0x20, entry 25)
     EventWinMesSet_08041058(0x20001A); // "You can always start all over, of course." (dialouge bank 0x20, entry 26)
-    EventUnsetFlag_080406D0(0x7E);
-    EventUnsetFlag_080406D0(0x7F);
+    EventUnsetFlag_080406FC(0x7E);
+    EventUnsetFlag_080406FC(0x7F);
     UnsetEventFlag_080406D0(0x80);
 }
 

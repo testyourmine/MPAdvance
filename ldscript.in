@@ -59,9 +59,9 @@ SECTIONS
 		asm/building/desert_area/game_mage_pyramid.o(.text);
 		asm/building/desert_area/klepto_ruins.o(.text);
 		asm/building/desert_area/bowser_stadium.o(.text);
-		asm/building/snow_area/ice_game_room.o(.text);
-		asm/building/snow_area/ice_stadium.o(.text);
-		asm/building/snow_area/mt_frostbite.o(.text);
+		src/building/snow_area/ice_game_room.o(.text);
+		src/building/snow_area/ice_stadium.o(.text);
+		src/building/snow_area/mt_frostbite.o(.text);
 		asm/building/jungle_area/ukiki_house.o(.text);
 		asm/building/jungle_area/dance_stage.o(.text);
 		asm/building/jungle_area/jungle_game_hut.o(.text);
@@ -101,7 +101,7 @@ SECTIONS
 		asm/party_land/koopa_kid_battle.o(.text);
 		asm/party_land/secret_battle.o(.text);
 		asm/party_land/party_land_link_related.o(.text);
-		asm/health_and_safety.o(.text);
+		src/health_and_safety.o(.text);
 		asm/m4a0.o(.text);
 		src/m4a.o(.text);
 		asm/libagbsyscall.o(.text);
@@ -197,6 +197,9 @@ SECTIONS
 		*libc.a:syscalls.o(.bss);
 
 		. = 0x00001EE0; SoundMainRAM_Buffer = .;
+		. = 0x000024B0; gUnknown_030024B0 = .;
+		. = 0x000024E0; gUnknown_030024E0 = .;
+		. = 0x00004400; gUnknown_03004400 = .;
 		. = 0x00004530; gSoundInfo = .;
 		. = 0x000054E0; gMPlayJumpTable = .;
 		. = 0x00005570; gCgbChans = .;

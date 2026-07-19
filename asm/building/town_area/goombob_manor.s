@@ -427,7 +427,7 @@ sub_080480DC: @ 0x080480DC
 	movs r1, #0x8c
 	movs r2, #0x34
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0
 	movs r2, #1
@@ -470,12 +470,12 @@ sub_080480DC: @ 0x080480DC
 	movs r1, #0x8c
 	movs r2, #0x24
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x8c
 	movs r2, #0x34
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x18
 	bl EventWinSpeakerSet_08041018
 	ldr r0, _08048350 @ =0x000A0022
@@ -566,7 +566,7 @@ sub_080480DC: @ 0x080480DC
 	movs r1, #0xf0
 	movs r2, #0x34
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x17
 	bl EventWinSpeakerSet_08041018
 	movs r0, #0

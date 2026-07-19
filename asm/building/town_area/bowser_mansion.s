@@ -1002,12 +1002,12 @@ _080490E2:
 	movs r1, #0x3c
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0x3c
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0
 	movs r2, #1
@@ -1017,7 +1017,7 @@ _080490E2:
 	movs r1, #0
 	movs r2, #0x68
 	movs r3, #0xc
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0xc
@@ -1036,7 +1036,7 @@ _080490E2:
 	movs r1, #0
 	movs r2, #0x68
 	movs r3, #0x78
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventWinSpeakerSet_08041018
 	bl GetCharacterID_080408B8
@@ -1205,11 +1205,11 @@ _08049560:
 	ldr r0, _08049674 @ =0x0006006E
 	bl EventWinMesSet_08041058
 	movs r0, #0x16
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x17
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x18
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x19
 	bl UnsetEventFlag_080406D0
 _0804964C:
@@ -1318,11 +1318,11 @@ _08049708:
 	ldr r0, _08049798 @ =0x00060066
 	bl EventWinMesSet_08041058
 	movs r0, #0x16
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x17
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x18
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x19
 	bl UnsetEventFlag_080406D0
 _08049784:

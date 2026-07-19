@@ -136,12 +136,68 @@ struct BuildingRelatedStruct {
     u32 unk4;
 };
 
+struct struct_030024E0 {
+    u16 unk0;
+    u16 unk2;
+    u16 unk4;
+    u16 unk6;
+    u16 unk8;
+    u16 unkA;
+    u16 unkC;
+    u16 unkE;
+    u16 unk10;
+    u16 unk12;
+    u16 unk14;
+    u8 pad16[0x4A - 0x16];
+    u16 unk4A;
+    u16 unk4C;
+    u8 unk4E;
+    u8 unk4F;
+};
+
+extern struct struct_030024E0 gUnknown_030024E0;
+
+struct struct_03004400  {
+    u32 unk0;
+    u8 unk4;
+    u8 unk5;
+    
+};
+
+extern struct struct_03004400 gUnknown_03004400;
+
+extern u16 gUnknown_0300252C;
+extern u16 gUnknown_030024B0;
+extern u8 gUnknown_0300252F;
+extern u16 gUnknown_0300252A;
+
+extern u32 gUnknown_0814F72C;
+extern u32 gUnknown_0814F70C;
+
+
+
+
+
 
 extern u32 gUnknown_0808DD7C;
 extern u32 gUnknown_0808E9BC;
 extern struct BuildingRelatedStruct gUnknown_0808DBF8;
 extern u32 gUnknown_0808DD54;
 extern u32 gUnknown_0808E9AC;
+extern u32 gUnknown_0808E6BC;
+extern u32 gUnknown_0808E99C;
+extern u32 gUnknown_0808E22C;
+extern u32 gUnknown_0808E204;
+extern u32 gUnknown_0808E86C;
+
+
+extern u32 gUnknown_0808E254;
+extern u32 gUnknown_0808E62C;
+extern u32 gUnknown_0808E7BC;
+extern u32 gUnknown_0808E7CC;
+extern u32 gUnknown_0808E70C;
+extern u32 gUnknown_0808E72C;
+extern u32 gUnknown_0808EA6C;
 
 
 void PlayJingle_08041100(s32);
@@ -149,7 +205,7 @@ void EventSetMinigame_08040B84(u32);
 void EventWaitForJingle_08041138(void);
 void SetEventFlag_080406BC(u32);
 void UnsetEventFlag_080406D0(u32);
-void EventUnsetFlag_080406D0(u32);
+void EventUnsetFlag_080406FC(u32);
 void sub_08041D0C(s32, s32, u32*);
 void EventSleep_08040690(u32);
 void EventAnimateChara_080418C8(u32, u32, u32, u32);
@@ -157,12 +213,15 @@ void EventWinInit_08040fe8();
 void EventWinSpeakerSet_08041018(u32);
 void EventWinMesSet_08041058(u32);
 void EventWinChoice_0804106C(u32);
-u32 EventWinChoiceGet_08041088();
+void QuestFinish_08042814(u32, u32);
+s8 EventWinChoiceGet_08041088();
 u32 EventQuestTitle_080408C4(u32, u32);
 void EventBGMPlay_080410A8(u32);
 void SetCharacterMetFlag_0802D7CC(u32);
 void EventSetFlag_080406E4(u32);
 void EventMgSpecialGoal_080427E0(u32, u32);
+void EventPlaySFX_080410E0(s32);
+void sub_08041808(s32, s32);
 
 void EventInit_080405B8();
 void LoadBuildingBG_0804115C(u32 *);
@@ -184,9 +243,50 @@ void sub_08041734(u32, u32);
 void sub_080417E0(u32);
 void EventPlaceChara_08041894(u32, u32, u32);
 void sub_080418C8(u32, u32, u32, u32);
+void sub_08041808(s32, s32);
+
+void EventMoveChara_08041938(u8, u8, u8, u8);
+void sub_080454C4();
+
+void EventSetupQuestMinigame_08040F18();
+s32 sub_08040EF0();
+void sub_08040F0C();
+u8 sub_08040F38();
+void sub_08040BB8();
+
+void EventWaitForJingle_08041138();
+void EventSetMinigame_08040B84();
+void SetEventFlag_080406BC();
+void EventUnsetFlag_080406FC();
+void UnsetEventFlag_080406D0();
+
+void DisplayGFX_080414B4(s32*, s32, s32);
+void sub_080412A0(s32, s32, s32);
+void sub_08041864(s8, s8);
+void sub_08041560();
+void sub_08041310();
+
+void FadeIn_08008AF4(s32, s32, s32, s32);
+void FadeOut_080089E8(s32, s32, s32, s32);
+
+void ProcSleep_08002B98(s32);
+void sub_08002B0C();
+void sub_08008D34();
+void ChangeGameState_08008790(s32);
+
 extern void sub_08043980();
 extern void sub_08043B04();
 extern void sub_08043BF4();
+extern void sub_08050390();
+extern void sub_080504CC();
+extern void sub_08050580();
+extern void sub_0804FF04();
+extern void sub_080500D8();
+extern void sub_08050220();
+extern void sub_080506E4();
+extern void sub_08050AAC();
+extern void sub_08050EBC();
+extern void sub_0805114C();
 
 #define ARRAY_COUNT(array) (sizeof(array) / sizeof((array)[0]))
 

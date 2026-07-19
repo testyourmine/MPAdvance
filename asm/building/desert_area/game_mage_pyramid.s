@@ -155,13 +155,13 @@ _0804EC54:
 	ldr r0, _0804ECA4 @ =0x0023001C
 	bl EventWinMesSet_08041058
 	movs r0, #0x87
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x88
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x89
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x8a
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x8b
 	bl UnsetEventFlag_080406D0
 _0804EC94:

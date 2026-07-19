@@ -68,7 +68,7 @@ sub_0804BE5C: @ 0x0804BE5C
 	movs r1, #0xb4
 	movs r2, #0x68
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x8f
 	lsls r0, r0, #1
 	bl EventPlaySFX_080410E0
@@ -454,12 +454,12 @@ sub_0804C1BC: @ 0x0804C1BC
 	movs r1, #0xb4
 	movs r2, #0x58
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0xb4
 	movs r2, #0x68
 	movs r3, #8
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0
 	movs r1, #0
 	movs r2, #0xb
@@ -469,7 +469,7 @@ sub_0804C1BC: @ 0x0804C1BC
 	movs r1, #0xf0
 	movs r2, #0x68
 	movs r3, #0xc
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x8e
 	lsls r0, r0, #1
 	bl EventPlaySFX_080410E0

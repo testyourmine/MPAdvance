@@ -24,7 +24,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x64
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -36,7 +36,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x60
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -48,7 +48,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x5c
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -60,7 +60,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x58
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -72,7 +72,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x5c
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -84,7 +84,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x60
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -96,7 +96,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x64
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #2
 	bl EventSleep_08040690
 	movs r0, #0
@@ -108,7 +108,7 @@ sub_08051A68: @ 0x08051A68
 	movs r1, #0x78
 	movs r2, #0x68
 	movs r3, #2
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x1e
 	bl EventSleep_08040690
 	pop {r0}
@@ -326,11 +326,11 @@ _08051D6C:
 	ldr r0, _08051DC4 @ =0x000D0016
 	bl EventWinMesSet_08041058
 	movs r0, #0x32
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x33
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x34
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x35
 	bl UnsetEventFlag_080406D0
 _08051DAE:

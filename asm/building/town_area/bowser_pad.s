@@ -516,13 +516,13 @@ _0804AC14:
 	ldr r0, _0804ACFC @ =0x000B0054
 	bl EventWinMesSet_08041058
 	movs r0, #0x29
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2a
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2b
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2c
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2d
 	bl UnsetEventFlag_080406D0
 _0804ACE4:
@@ -902,13 +902,13 @@ _0804AFEC:
 	ldr r0, _0804B118 @ =0x000B004F
 	bl EventWinMesSet_08041058
 	movs r0, #0x29
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2a
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2b
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2c
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x2d
 	bl UnsetEventFlag_080406D0
 _0804B0F2:

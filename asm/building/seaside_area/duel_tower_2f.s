@@ -59,7 +59,7 @@ _0805826C:
 	movs r1, #0x78
 	movs r2, #0
 	movs r3, #0x28
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #0x78
 	bl EventSleep_08040690
 	ldr r0, _080583DC @ =0x0000011D
@@ -73,7 +73,7 @@ _0805826C:
 	movs r1, #0x78
 	movs r2, #0x59
 	movs r3, #0x10
-	bl sub_08041938
+	bl EventMoveChara_08041938
 	movs r0, #1
 	movs r1, #0
 	movs r2, #1
@@ -236,13 +236,13 @@ _08058474:
 	ldr r0, _080584DC @ =0x0025001A
 	bl EventWinMesSet_08041058
 	movs r0, #0x90
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x92
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x95
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x91
-	bl EventUnsetFlag_080406D0
+	bl EventUnsetFlag_080406FC
 	movs r0, #0x93
 	bl UnsetEventFlag_080406D0
 _080584C6:
