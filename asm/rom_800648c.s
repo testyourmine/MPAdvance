@@ -6136,7 +6136,7 @@ sub_0800925C: @ 0x0800925C
 	ldr r1, _080092B8 @ =0x040000D4
 	ldr r0, _080092BC @ =0x0807F5B4
 	str r0, [r1]
-	ldr r0, _080092C0 @ =0x03002560
+	ldr r0, _080092C0 @ =gIntrTable
 	str r0, [r1, #4]
 	ldr r0, _080092C4 @ =0x8400000E
 	str r0, [r1, #8]
@@ -6177,7 +6177,7 @@ sub_0800925C: @ 0x0800925C
 	.align 2, 0
 _080092B8: .4byte 0x040000D4
 _080092BC: .4byte 0x0807F5B4
-_080092C0: .4byte 0x03002560
+_080092C0: .4byte gIntrTable
 _080092C4: .4byte 0x8400000E
 _080092C8: .4byte IntrMain
 _080092CC: .4byte 0x030025A0
@@ -6195,7 +6195,7 @@ sub_080092F0: @ 0x080092F0
 	ldr r3, _08009304 @ =0x04000208
 	movs r2, #0
 	strh r2, [r3]
-	ldr r2, _08009308 @ =0x03002560
+	ldr r2, _08009308 @ =gIntrTable
 	lsls r1, r1, #2
 	adds r1, r1, r2
 	str r0, [r1]
@@ -6204,14 +6204,14 @@ sub_080092F0: @ 0x080092F0
 	bx lr
 	.align 2, 0
 _08009304: .4byte 0x04000208
-_08009308: .4byte 0x03002560
+_08009308: .4byte gIntrTable
 
 	thumb_func_start sub_0800930C
 sub_0800930C: @ 0x0800930C
 	ldr r2, _08009324 @ =0x04000208
 	movs r0, #0
 	strh r0, [r2]
-	ldr r0, _08009328 @ =0x03002560
+	ldr r0, _08009328 @ =gIntrTable
 	lsls r1, r1, #2
 	adds r1, r1, r0
 	ldr r0, _0800932C @ =sub_0800942C
@@ -6221,7 +6221,7 @@ sub_0800930C: @ 0x0800930C
 	bx lr
 	.align 2, 0
 _08009324: .4byte 0x04000208
-_08009328: .4byte 0x03002560
+_08009328: .4byte gIntrTable
 _0800932C: .4byte sub_0800942C
 
 	thumb_func_start sub_08009330
@@ -10552,8 +10552,8 @@ sub_0800B320: @ 0x0800B320
 	.align 2, 0
 _0800B330: .4byte 0x0807FC04
 
-	thumb_func_start sub_0800B334
-sub_0800B334: @ 0x0800B334
+	thumb_func_start AgbMain
+AgbMain: @ 0x0800B334
 	push {r4, r5, r6, r7, lr}
 	mov r7, sl
 	mov r6, sb
